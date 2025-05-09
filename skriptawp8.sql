@@ -13,9 +13,25 @@
 --);
 
 
-create table grupe(
+--create table grupe(
+--sifra int,
+--naziv varchar(20),
+--smjer int,
+--predavac varchar(50),
+--);
+
+--create table polaznici(
+--sifra int,
+--ime varchar(50),
+--prezime varchar(50),
+--email varchar(100)
+--);
+
+create table polaznici(
 sifra int,
-naziv varchar(20),
-smjer int,
-predavac varchar(50),
+ime varchar(50),
+prezime varchar(50),
+email varchar(100)
 );
+
+
