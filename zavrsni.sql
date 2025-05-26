@@ -4,7 +4,7 @@ GO
 
 drop database if exists webshop;
 
-CREATE DATABASE webshop;
+CREATE DATABASE webshop collate Croatian_CI_AS;
 
 GO
 
