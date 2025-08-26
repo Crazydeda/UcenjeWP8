@@ -1,0 +1,48 @@
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fine Selections - @ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+<header class="header">
+    <div class="wrap">
+        <a class="logo" href="/">Fine <span>Selections</span></a>
+        <form asp-controller="Home" asp-action="Index" method="get" class="search">
+            <input type="text" name="q" placeholder="Pretraži premium žestoka pića..." />
+            <button type="submit">Traži</button>
+        </form>
+        <nav class="nav">
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <a asp-area="" asp-page="/Account/Manage/Index">Moj račun</a>
+                <form asp-area="" asp-page="/Account/Logout" method="post"><button type="submit" class="link">Odjava</button></form>
+            }
+            else
+            {
+                <a asp-area="" asp-page="/Account/Login">Prijava</a>
+                <a asp-area="" asp-page="/Account/Register">Registracija</a>
+            }
+            <a asp-controller="Cart" asp-action="Index">Košarica</a>
+        </nav>
+    </div>
+</header>
+
+<main class="wrap">
+    @RenderBody()
+</main>
+
+<footer class="footer">
+    <div class="wrap">
+        <p>&copy; @DateTime.UtcNow.Year Fine Selections – Inspirirano stilom ecuga.com</p>
+        <p><a asp-controller="Products" asp-action="Admin">Admin</a></p>
+    </div>
+</footer>
+</body>
+</html>

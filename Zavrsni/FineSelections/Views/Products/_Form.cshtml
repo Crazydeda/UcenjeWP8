@@ -1,0 +1,11 @@
+
+@model FineSelections.Models.Product
+<div class="form">
+    <label>Naziv <input asp-for="Naziv"/></label>
+    <label>Vrsta <input asp-for="Vrsta"/></label>
+    <label>Opis <textarea asp-for="Opis"></textarea></label>
+    <label>Cijena <input asp-for="Cijena" type="number" step="0.01"/></label>
+    <label>Zaliha <input asp-for="Zaliha" type="number"/></label>
+    <label>Slika URL <input asp-for="Slika"/></label>
+    <span asp-validation-summary="All"></span>
+</div>
