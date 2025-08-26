@@ -1,0 +1,43 @@
+@model IEnumerable<FineSelections.Web.Models.Proizvod>
+@{
+  ViewData["Title"] = "Katalog";
+  var vrste = (IEnumerable<string>)ViewBag.Vrste;
+}
+<div class="d-flex align-items-center justify-content-between mb-3">
+  <h3 class="m-0">Katalog</h3>
+  <a class="btn btn-sm btn-outline-secondary" href="/">Početna</a>
+</div>
+<form class="row g-2 mb-3">
+  <div class="col-md-3">
+    <select class="form-select" name="vrsta">
+      <option value="">Sve vrste</option>
+      @foreach (var v in vrste) { <option value="@v" selected="@(Context.Request.Query["vrsta"] == v ? "selected" : null)">@v</option> }
+    </select>
+  </div>
+  <div class="col-md-6">
+    <input class="form-control" name="q" placeholder="Pretraži..." value="@Context.Request.Query["q"]" />
+  </div>
+  <div class="col-md-3">
+    <button class="btn w-100 btn-dark" type="submit">Primijeni</button>
+  </div>
+</form>
+<div class="row row-cols-1 row-cols-md-4 g-3">
+@foreach (var p in Model)
+{
+  <div class="col">
+    <div class="card card-product h-100 shadow-sm">
+      <img src="@p.slika" class="card-img-top" alt="@p.naziv" />
+      <div class="card-body">
+        <div class="small text-muted">@p.vrsta</div>
+        <h6 class="card-title mt-1">@p.naziv</h6>
+        <div class="fw-bold mb-2">@p.cijena.ToString("0.00") €</div>
+        <form method="post" action="/Cart/Add" class="d-flex gap-2">
+          <input type="hidden" name="productId" value="@p.ID_proizvoda" />
+          <input type="number" class="form-control form-control-sm" name="qty" value="1" min="1" style="max-width:80px;" />
+          <button class="btn btn-sm btn-outline-dark" type="submit">U košaricu</button>
+        </form>
+      </div>
+    </div>
+  </div>
+}
+</div>

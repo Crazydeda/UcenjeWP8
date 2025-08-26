@@ -1,0 +1,20 @@
+@model FineSelections.Web.Models.Proizvod
+@{
+  ViewData["Title"] = Model.naziv;
+}
+<div class="row g-4">
+  <div class="col-md-6">
+    <img class="img-fluid rounded shadow-sm" src="@Model.slika" alt="@Model.naziv" />
+  </div>
+  <div class="col-md-6">
+    <span class="badge-pill">@Model.vrsta</span>
+    <h2 class="mt-2">@Model.naziv</h2>
+    <p class="lead">@Model.opis</p>
+    <div class="h4">@Model.cijena.ToString("0.00") €</div>
+    <form method="post" action="/Cart/Add" class="d-flex gap-2 mt-3">
+      <input type="hidden" name="productId" value="@Model.ID_proizvoda" />
+      <input type="number" class="form-control" name="qty" value="1" min="1" style="max-width:120px;" />
+      <button class="btn btn-dark" type="submit">Dodaj u košaricu</button>
+    </form>
+  </div>
+</div>
