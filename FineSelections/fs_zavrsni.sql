@@ -33,12 +33,12 @@ CREATE TABLE proizvodi (
     slika VARCHAR(355)
 );
 
-INSERT INTO proizvodi (naziv, vrsta, opis, cijena, zaliha, slika) VALUES ('The Macallan 25 #1', 'viski', 'Jedan od najpoznatijih škotskih viskija.', 3207.62, 10, 'https://example.com/images/viski/The_Macallan_25_1.jpg');
-INSERT INTO proizvodi (naziv, vrsta, opis, cijena, zaliha, slika) VALUES ('Yamazaki 18 #1', 'viski', 'Poznati japanski single malt.', 2256.16, 2, 'https://example.com/images/viski/Yamazaki_18_1.jpg');
-INSERT INTO proizvodi (naziv, vrsta, opis, cijena, zaliha, slika) VALUES ('Glenfiddich 30 #1', 'viski', 'Star i rijedak viski iz Speyside regije.', 1117.82, 2, 'https://example.com/images/viski/Glenfiddich_30_1.jpg');
-INSERT INTO proizvodi (naziv, vrsta, opis, cijena, zaliha, slika) VALUES ('Highland Park 21 #1', 'viski', 'Izuzetno izbalansiran viski s Orkneyskih otoka.', 4981.99, 7, 'https://example.com/images/viski/Highland_Park_21_1.jpg');
-INSERT INTO proizvodi (naziv, vrsta, opis, cijena, zaliha, slika) VALUES ('Balvenie 21 PortWood #1', 'viski', 'Sazrio u port vinskim bačvama.', 2904.32, 5, 'https://example.com/images/viski/Balvenie_21_PortWood_1.jpg');
-INSERT INTO proizvodi (naziv, vrsta, opis, cijena, zaliha, slika) VALUES ('Dalmore 25 #1', 'viski', 'Luksuzni škotski viski sa složenim notama.', 3335.48, 8, 'https://example.com/images/viski/Dalmore_25_1.jpg');
+INSERT INTO proizvodi (naziv, vrsta, opis, cijena, zaliha, slika) VALUES ('The Macallan 25 #1', 'viski', 'Jedan od najpoznatijih škotskih viskija.', 3207.62, 10, 'https://woodencork.com/cdn/shop/products/Macallan-25-Year-Scotch-Whisky.png?v=1699067146');
+INSERT INTO proizvodi (naziv, vrsta, opis, cijena, zaliha, slika) VALUES ('Yamazaki 18 #1', 'viski', 'Poznati japanski single malt.', 2256.16, 2, 'https://www.uisuki.com/775-image_product_full/yamazaki-18-year-old.jpg');
+INSERT INTO proizvodi (naziv, vrsta, opis, cijena, zaliha, slika) VALUES ('Glenfiddich 30 #1', 'viski', 'Star i rijedak viski iz Speyside regije.', 1117.82, 2, 'https://allez.hr/imager/600x800/upload/products/glenfiddich_30_years_old_single_malt_scotch_whisky_time_seri.jpg?resize=1');
+INSERT INTO proizvodi (naziv, vrsta, opis, cijena, zaliha, slika) VALUES ('Highland Park 21 #1', 'viski', 'Izuzetno izbalansiran viski s Orkneyskih otoka.', 4981.99, 7, 'https://www.dasgibtesnureinmal.de/media/catalog/product/cache/bee46d07f2312ce471329cab84f54dac/h/i/highlandpark_21yo2020release_gp.png');
+INSERT INTO proizvodi (naziv, vrsta, opis, cijena, zaliha, slika) VALUES ('Balvenie 21 PortWood #1', 'viski', 'Sazrio u port vinskim bačvama.', 2904.32, 5, 'https://www.onlinecava.com/wp-content/uploads/2020/05/W1116.jpg');
+INSERT INTO proizvodi (naziv, vrsta, opis, cijena, zaliha, slika) VALUES ('Dalmore 25 #1', 'viski', 'Luksuzni škotski viski sa složenim notama.', 3335.48, 8, 'https://thechamber.my/files/product_img/1818/The-Dalmore-25-Year-Old-1.png');
 INSERT INTO proizvodi (naziv, vrsta, opis, cijena, zaliha, slika) VALUES ('Lagavulin 16 #1', 'viski', 'Peaty viski sa Islay otoka.', 4257.36, 2, 'https://example.com/images/viski/Lagavulin_16_1.jpg');
 INSERT INTO proizvodi (naziv, vrsta, opis, cijena, zaliha, slika) VALUES ('Oban 21 #1', 'viski', 'Klasičan coastal viski s dubokim karakterom.', 4037.71, 5, 'https://example.com/images/viski/Oban_21_1.jpg');
 INSERT INTO proizvodi (naziv, vrsta, opis, cijena, zaliha, slika) VALUES ('Ardbeg Uigeadail #1', 'viski', 'Dimljeni viski s jakim aromama.', 971.89, 4, 'https://example.com/images/viski/Ardbeg_Uigeadail_1.jpg');

@@ -1,0 +1,3 @@
+wwwroot\css\site.css
+wwwroot\img\hero.jpg
+C:\Users\dujak\OneDrive\Documents\GitHub\UcenjeWP8\FineSelections\FineSelections\wwwroot\css\site.css
