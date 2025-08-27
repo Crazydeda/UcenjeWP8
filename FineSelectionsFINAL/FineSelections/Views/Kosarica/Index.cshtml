@@ -1,0 +1,58 @@
+@model FineSelections.Models.Kosarica
+@{
+    ViewData["Title"] = "Košarica";
+    decimal total = 0;
+}
+<h1>Košarica</h1>
+
+@if (Model.Stavke == null || !Model.Stavke.Any())
+{
+    <p>Košarica je prazna.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Proizvod</th>
+                <th>Cijena</th>
+                <th>Količina</th>
+                <th>Ukupno</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var s in Model.Stavke)
+        {
+            var line = s.CijenaKom * s.Kolicina;
+            total += line;
+            <tr>
+                <td>@s.Proizvod?.Naziv</td>
+                <td>@s.CijenaKom.ToString("0.00") €</td>
+                <td class="qty">
+                    <form asp-action="Minus" method="post"><input type="hidden" name="stavkaId" value="@s.ID_stavke" /><button class="btn-small">-</button></form>
+                    <span>@s.Kolicina</span>
+                    <form asp-action="Plus" method="post"><input type="hidden" name="stavkaId" value="@s.ID_stavke" /><button class="btn-small">+</button></form>
+                </td>
+                <td>@line.ToString("0.00") €</td>
+                <td>
+                    <form asp-action="Remove" method="post">
+                        <input type="hidden" name="stavkaId" value="@s.ID_stavke" />
+                        <button class="btn-outline">Ukloni</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" style="text-align:right"><strong>Ukupno:</strong></td>
+                <td colspan="2"><strong>@total.ToString("0.00") €</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <form asp-action="Checkout" method="post">
+        <button class="btn">Završi kupovinu</button>
+    </form>
+}
