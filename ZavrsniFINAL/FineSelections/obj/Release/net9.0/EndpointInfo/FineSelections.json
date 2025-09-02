@@ -1,0 +1,1624 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "FineSelections API",
+    "description": "REST API for FineSelections webshop - premium spirits and liquors",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Korisnici": {
+      "get": {
+        "tags": [
+          "Korisnici"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Korisnik"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Korisnik"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Korisnik"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Korisnici"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Korisnik"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Korisnik"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Korisnik"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Korisnik"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Korisnik"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Korisnik"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Korisnik"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Korisnici/{id}": {
+      "get": {
+        "tags": [
+          "Korisnici"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Korisnik"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Korisnik"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Korisnik"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Korisnici"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Korisnik"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Korisnik"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Korisnik"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Korisnik"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Korisnici"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Kosarice": {
+      "get": {
+        "tags": [
+          "Kosarice"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Kosarica"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Kosarica"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Kosarica"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Kosarice"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Kosarica"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Kosarica"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Kosarica"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Kosarica"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Kosarica"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Kosarica"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Kosarica"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Kosarice/{id}": {
+      "get": {
+        "tags": [
+          "Kosarice"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Kosarica"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Kosarica"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Kosarica"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Kosarice"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Kosarica"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Kosarica"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Kosarica"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Kosarica"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Kosarice"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Kosarice/korisnik/{korisnikId}": {
+      "get": {
+        "tags": [
+          "Kosarice"
+        ],
+        "parameters": [
+          {
+            "name": "korisnikId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Kosarica"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Kosarica"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Kosarica"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Narudzbe": {
+      "get": {
+        "tags": [
+          "Narudzbe"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Narudzba"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Narudzba"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Narudzba"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Narudzbe"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Narudzba"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Narudzba"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Narudzba"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Narudzba"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Narudzba"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Narudzba"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Narudzba"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Narudzbe/{id}": {
+      "get": {
+        "tags": [
+          "Narudzbe"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Narudzba"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Narudzba"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Narudzba"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Narudzbe"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Narudzba"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Narudzba"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Narudzba"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Narudzba"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Narudzbe"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Narudzbe/korisnik/{korisnikId}": {
+      "get": {
+        "tags": [
+          "Narudzbe"
+        ],
+        "parameters": [
+          {
+            "name": "korisnikId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Narudzba"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Narudzba"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Narudzba"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Proizvodi": {
+      "get": {
+        "tags": [
+          "Proizvodi"
+        ],
+        "parameters": [
+          {
+            "name": "vrsta",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Proizvod"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Proizvod"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Proizvod"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Proizvodi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Proizvod"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Proizvod"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Proizvod"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Proizvod"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Proizvod"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Proizvod"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Proizvod"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Proizvodi/{id}": {
+      "get": {
+        "tags": [
+          "Proizvodi"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Proizvod"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Proizvod"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Proizvod"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Proizvodi"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Proizvod"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Proizvod"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Proizvod"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Proizvod"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Proizvodi"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Proizvodi/vrste": {
+      "get": {
+        "tags": [
+          "Proizvodi"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/StavkeKosarice/{id}": {
+      "get": {
+        "tags": [
+          "StavkeKosarice"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/StavkaKosarice"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StavkaKosarice"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StavkaKosarice"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "StavkeKosarice"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StavkaKosarice"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StavkaKosarice"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StavkaKosarice"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StavkaKosarice"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "StavkeKosarice"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/StavkeKosarice/kosarica/{kosaricaId}": {
+      "get": {
+        "tags": [
+          "StavkeKosarice"
+        ],
+        "parameters": [
+          {
+            "name": "kosaricaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StavkaKosarice"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StavkaKosarice"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StavkaKosarice"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/StavkeKosarice": {
+      "post": {
+        "tags": [
+          "StavkeKosarice"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StavkaKosarice"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StavkaKosarice"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StavkaKosarice"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StavkaKosarice"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/StavkaKosarice"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StavkaKosarice"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StavkaKosarice"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/StavkeNarudzbe": {
+      "get": {
+        "tags": [
+          "StavkeNarudzbe"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StavkaNarudzbe"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StavkaNarudzbe"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StavkaNarudzbe"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "StavkeNarudzbe"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StavkaNarudzbe"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StavkaNarudzbe"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StavkaNarudzbe"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StavkaNarudzbe"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/StavkaNarudzbe"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StavkaNarudzbe"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StavkaNarudzbe"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/StavkeNarudzbe/{id}": {
+      "get": {
+        "tags": [
+          "StavkeNarudzbe"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/StavkaNarudzbe"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StavkaNarudzbe"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StavkaNarudzbe"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "StavkeNarudzbe"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StavkaNarudzbe"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StavkaNarudzbe"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StavkaNarudzbe"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StavkaNarudzbe"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "StavkeNarudzbe"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/StavkeNarudzbe/narudzba/{narudzbaId}": {
+      "get": {
+        "tags": [
+          "StavkeNarudzbe"
+        ],
+        "parameters": [
+          {
+            "name": "narudzbaId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StavkaNarudzbe"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StavkaNarudzbe"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StavkaNarudzbe"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Korisnik": {
+        "type": "object",
+        "properties": {
+          "idKorisnika": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ime": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "prezime": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "godRod": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "email": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "adresa": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "telefon": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Kosarica": {
+        "type": "object",
+        "properties": {
+          "idKosarice": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idKorisnika": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "datumKreiranja": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "korisnik": {
+            "$ref": "#/components/schemas/Korisnik"
+          },
+          "stavkeKosarice": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StavkaKosarice"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Narudzba": {
+        "type": "object",
+        "properties": {
+          "idNarudzbe": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idKorisnika": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "datumNarudzbe": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ukupnaCijena": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "status": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "korisnik": {
+            "$ref": "#/components/schemas/Korisnik"
+          },
+          "stavkeNarudzbe": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StavkaNarudzbe"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Proizvod": {
+        "type": "object",
+        "properties": {
+          "idProizvoda": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "naziv": {
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "vrsta": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "opis": {
+            "maxLength": 500,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "cijena": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "zaliha": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "slika": {
+            "maxLength": 355,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StavkaKosarice": {
+        "type": "object",
+        "properties": {
+          "idStavke": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idKosarice": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "idProizvoda": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "kolicina": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "cijenaKom": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "proizvod": {
+            "$ref": "#/components/schemas/Proizvod"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StavkaNarudzbe": {
+        "type": "object",
+        "properties": {
+          "idStavkeNarudzbe": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idNarudzbe": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "idProizvoda": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "kolicina": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "cijenaKom": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "narudzba": {
+            "$ref": "#/components/schemas/Narudzba"
+          },
+          "proizvod": {
+            "$ref": "#/components/schemas/Proizvod"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

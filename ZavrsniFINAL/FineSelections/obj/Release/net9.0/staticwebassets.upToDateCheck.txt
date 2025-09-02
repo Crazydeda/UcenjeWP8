@@ -1,0 +1,16 @@
+wwwroot\asset-manifest.json
+wwwroot\index.html
+wwwroot\manifest.json
+wwwroot\static\css\main.4ac0ca6a.css
+wwwroot\static\css\main.4ac0ca6a.css.map
+wwwroot\static\js\main.f6c33b56.js
+wwwroot\static\js\main.f6c33b56.js.LICENSE.txt
+wwwroot\static\js\main.f6c33b56.js.map
+H:\Programming\Git\dedadeda\FineSelections\wwwroot\static\js\main.f6c33b56.js.map
+H:\Programming\Git\dedadeda\FineSelections\wwwroot\static\js\main.f6c33b56.js.LICENSE.txt
+H:\Programming\Git\dedadeda\FineSelections\wwwroot\static\css\main.4ac0ca6a.css.map
+H:\Programming\Git\dedadeda\FineSelections\wwwroot\static\css\main.4ac0ca6a.css
+H:\Programming\Git\dedadeda\FineSelections\wwwroot\manifest.json
+H:\Programming\Git\dedadeda\FineSelections\wwwroot\index.html
+H:\Programming\Git\dedadeda\FineSelections\wwwroot\asset-manifest.json
+H:\Programming\Git\dedadeda\FineSelections\wwwroot\static\js\main.f6c33b56.js
